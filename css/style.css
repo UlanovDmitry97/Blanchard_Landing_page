@@ -1266,6 +1266,7 @@ body {
 }
 @media (max-width: 576px) {
   .container {
+    overflow-x: hidden;
     width: 100%;
   }
   .header {
@@ -1390,9 +1391,15 @@ body {
   }
   .main-projects-menu__btn {
     margin: 0;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .main-projects-cards {
+    width: 100%;
   }
   .main-projects-cards_card {
-    width: 370px;
+    width: 90%;
     margin: 0 0 60px 0;
     position: relative;
   }
@@ -1400,11 +1407,9 @@ body {
     display: none;
   }
   .main-mobile {
-    border: 1px solid red;
-    box-sizing: border-box;
     justify-content: flex-start;
     align-items: flex-start;
-    min-height: 650px;
+    min-height: 0;
     background-size: 50%;
     background-position-x: 50px;
   }
@@ -1473,11 +1478,11 @@ body {
     flex-wrap: wrap;
   }
   .footer-copi-left {
-    width: 100%;
+    width: 90%;
     justify-content: center;
   }
   .footer-copi-right {
-    width: 100%;
+    width: 90%;
     justify-content: center;
   }
 }
