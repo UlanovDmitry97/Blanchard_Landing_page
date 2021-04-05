@@ -1,0 +1,60 @@
+.main-advertising{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  width: 100%;
+  background-image: url(../img/background_ad.png);
+
+  &-wrp{
+    display: flex;
+    flex-direction: column;
+    width: 530px;
+
+    &_title{
+      margin: 0;
+      width: 100%;
+      font-family: 'raleway',sans-serif;
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #ffffff;
+    
+      &__first{
+        color: #c7b299;
+
+
+      }
+    }
+
+    &_text{
+      display: block;
+      margin: 8px 0 0 0;
+      font-family: 'montserrat', sans-serif;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 300;
+      color: #615855;
+    }
+  }
+
+  &-purchase{
+    width: 170px;
+    height: 50px;
+    margin: 0 0 0 470px;
+    background-color: #998675;
+    box-shadow: inset 0px -3px 0px 0px #736357;
+    border-radius: 9px;
+    outline: none;
+    font-family: 'raleway', sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    &:hover{
+      background-color: #c7bbad;
+    }
+    }
+}

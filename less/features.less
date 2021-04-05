@@ -1,0 +1,68 @@
+.main{
+
+  &-features{
+    padding: 80px 0 0 0;
+    box-sizing: border-box;
+
+    &-wrp{
+      margin: 0 0 80px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &_card{
+        min-height: 227px;
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::after{
+          content: "";
+          display: block;
+          width: 70px;
+          height: 3px;
+          background-color: #f1eee9;
+        }
+
+        &:hover &__icon{
+          fill: #c7b299;
+        }
+
+        &:hover &__title{
+          color: #c7b299;
+        }
+
+        &:hover::after{
+          background-color: #c7b299;
+        }
+
+        &__icon{
+          margin: 0 0 29px 0;
+          width: 52px;
+          height: 44px;
+          fill: #555555;
+        }
+
+        &__title{
+          font-family: 'raleway', sans-serif;
+          font-size: 22px;
+          line-height: 1.2;
+          font-weight: 600;
+          color: #555555;
+
+        }
+
+        &__text{
+          margin: 19px 0 30px 0;
+          text-align: center;
+          font-family: 'montserrat', sans-serif;
+          font-size: 14px;
+          line-height: 24px;
+          font-weight: 300;
+          color: #8c8c8c;
+        }
+      }
+    }
+  }
+}

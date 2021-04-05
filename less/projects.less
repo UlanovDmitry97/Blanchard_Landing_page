@@ -1,0 +1,239 @@
+.main-projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+  &-title{
+    margin: 81px 0 24px 0;
+    font-family: 'raleway', sans-serif;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #555555;
+  }
+
+  &-text{
+    margin: 0 0 40px 0;
+    width: 40%;
+    text-align: center;
+    font-family: 'montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #8c8c8c;
+  }
+
+  &-menu{
+    margin: 0 0 40px 0;
+
+    &__btn{
+      margin: 0 10px 0 0;
+      padding: 0;
+      height: 32px;
+      border: 1px solid #ebebeb;
+      background-color: rgba(17,17,17,0.0);
+      border-radius: 3px;
+      outline: none;
+      font-family: 'montserrat', sans-serif;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 300;
+      color: #8c8c8c;
+
+      &:first-child{
+        width: 70px;
+      }
+
+      &:nth-child(2){
+        width: 120px;
+      }
+
+      &:nth-child(3){
+        width: 120px;
+      }
+
+      &:nth-child(4){
+        width: 120px;
+      }
+
+      &:last-child{
+        width: 135px;
+        margin: 0;
+      }
+
+      &:hover{
+        background-color: #998675;
+        color: #ffffff;
+      }
+
+      &:active{
+        background-color: rgba(17,17,17,0.0);
+        color: #8c8c8c;
+      }
+
+    }
+
+
+
+  }
+
+  &-cards{
+    margin: 0 0 10px 0;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &_card{
+      width: 370px;
+      margin: 0 30px 30px 0;
+      position: relative;
+
+      &:hover &__link{
+        display: block;
+      }
+
+      &:hover &__search{
+        display: block;
+      }
+
+      &:hover &__link:hover &__link-icon{
+        fill: #c7b299;
+      }
+
+      &:hover &__link:active &__link-icon{
+        fill: @active;
+      }
+
+      &:hover &__search:hover &__search-icon{
+        fill: #c7b299;
+      }
+
+      &:hover &__search:active &__search-icon{
+        fill: @active;
+      }
+
+      &:hover &__photo{
+        filter: brightness(20%);
+      }
+
+      &:hover &__txt-wrp{
+        background-color: #362f2d;
+      }
+
+      &:hover &__txt-wrp::before{
+        border-bottom: 10px solid #362f2d;
+      }
+
+      &:hover &__txt-wrp_title{
+        color: #ffffff;
+      }
+
+      &:hover &__txt-wrp_text{
+        color: #c7b299;
+      }
+
+      &__photo{
+        display: block;
+        width: 100%;
+
+      }
+
+      &__txt-wrp{
+        position: relative;
+        width: 100%;
+        padding: 30px 0 27px 0;
+        box-sizing: border-box;
+        background-color: #fbfaf8;
+
+        &_title{
+          display: block;
+          padding: 0 0 0 28px;
+          box-sizing: border-box;
+          margin: 0px 0 14px 0;
+          font-family: 'raleway', sans-serif;
+          font-size: 20px;
+          line-height: 1.2;
+          font-weight: 500;
+          color: #c7b299;
+        }
+
+        &_text{
+          display: block;
+          padding: 0 0 0 28px;
+          font-family: 'montserrat', sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 300;
+          color: #d1d1d1;
+        }
+
+        &::before{
+          content: "";
+          content: "";
+          border: 10px solid transparent;	
+          border-bottom: 10px solid #fbfaf8;
+          position: absolute;
+          top: -20px;
+          left: 19px;
+        }
+
+      }
+
+      &__link,
+      &__search{
+        width: 26px;
+        height: 25px;
+        padding: 0;
+        display: none;
+        border: none;
+        outline: none;
+        position: absolute;
+        background-color: transparent;
+        top: 29%
+      }
+
+      &__search{
+        right: 39%;
+
+        &-icon{
+          fill: #ffffff;
+        }
+      }
+
+      &__link{
+        left: 36%;
+
+        &-icon{
+          fill: #ffffff;
+        }
+      }
+    }
+
+  }
+
+  &-btn{
+    width: 170px;
+    height: 50px;
+    margin: 0 0 80px 0;
+    background-color: #998675;
+    box-shadow: inset 0px -3px 0px 0px #736357;
+    border-radius: 9px;
+    outline: none;
+    font-family: 'raleway', sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    &:hover{
+      background-color: #c7bbad;
+    }
+  }
+
+}

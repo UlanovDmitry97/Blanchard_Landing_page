@@ -1,0 +1,267 @@
+@media ( max-width: 576px ){
+  .container {
+    width: 100%;
+  }
+
+  .header {
+    min-height: 0;
+    background-size: cover;
+  }
+
+  .header-top {
+    position: relative;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header-top-menu-burger{
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+
+    &__icon1{
+      display:block;
+       line-height: 0;
+       width: 100%;
+       height: 2px;
+       margin-top: 8px;
+       background-color:#ffffff;
+       transform-origin: 84% 50%;
+       transition:  transform 2s ease-in-out;
+       animation: burger_icon1 ;
+
+    }
+
+    &__icon2{
+      display:block;
+       line-height: 0;
+       width: 100%;
+       height: 2px;
+       margin-top: 8px;
+       background-color:#ffffff;
+       transition:  opacity 700ms ease-in-out;
+
+
+    }
+
+    &__icon3{
+      display:block;
+       line-height: 0;
+       width: 100%;
+       height: 2px;
+       margin-top: 8px;
+       background-color:#ffffff;
+       transform-origin: 84% -50%;
+       transition: transform 2s ease-in-out;
+    }
+
+    &:active &__icon2{
+      opacity: 0;
+    }
+
+    &:active &__icon1{
+      transform: rotate(-45deg);
+      bottom: 0px;
+    }
+
+    &:active &__icon3{
+      transform: rotate(45deg);
+      top: 0px;
+    }
+
+  }
+
+  input[type="checkbox"]:checked ~ .header-top-menu-list {
+    height: auto;
+    width: auto;
+    visibility: visible;
+  }
+
+  .header-top-menu {
+    margin: 0;
+}
+
+  .header-top-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+  .header-top-menu-list-item {
+    text-align: center;
+    display: block;
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+
+  .header-top-menu-list-item:last-child {
+    margin: 10px 0 0 0;
+  }
+  .header-slider{
+    display: none;
+  }
+
+  .main-features {
+    padding: 20px 0 20px 0;
+    box-sizing: border-box;
+  }
+
+  .main-features-wrp {
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+  .main-features-wrp_card {
+    min-height: 227px;
+    margin: 0 0 20px 0;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .main-realization {
+    display: none;
+}
+  
+  .main-advertising {
+    display: none;
+  }
+
+  .main-projects-title {
+    margin: 20px 0 20px 0;
+}
+
+  .main-projects-text {
+    width: 100%;
+  }
+
+  .main-projects-menu {
+    width: 100%;
+    margin: 0 0 40px 0;
+    display: flex;
+}
+
+  .main-projects-menu__btn {
+    margin: 0;
+}
+
+.main-projects-cards_card {
+  width: 370px;
+  margin: 0 0 60px 0;
+  position: relative;
+}
+
+.main-video {
+  display: none;
+}
+
+.main-mobile {
+  border: 1px solid red;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 650px;
+  background-size: 50%;
+  background-position-x: 50px;
+}
+
+.main-mobile-wrp {
+  margin: 20px 0 0 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 0;
+
+  &__title{
+    text-align: center;
+  }
+
+  &__text{
+    width: 90%;
+    margin: 20px 0 30px 0;
+    text-align: center;
+  }
+
+  &__list{
+    margin-left: 60%;
+    width: 39%;
+  }
+}
+.main-counter {
+  display: none;
+}
+
+.main-posts-title {
+  margin: 30px 0 30px 0;
+}
+
+.main-posts-text {
+  width: 90%;
+}
+
+.main-posts-cards {
+  flex-direction: column;
+}
+
+.main-posts-cards__card {
+  margin: 0 0 40px 0;
+}
+
+.main-posts-wrp {
+  margin: 0 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-partners {
+  padding: 20px 0 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 0;
+  background-image: url(../img/main_partners_bg.png);
+  background-size: cover;
+}
+
+.main-partners-card {
+  margin: 0;
+  width: 20%;
+}
+
+.main-partners-card-icon {
+  width: 75%;
+}
+
+.footer-content {
+  display: none;
+}
+
+.footer-copi {
+  min-height: 180px;
+  flex-wrap: wrap;
+}
+
+.footer-copi-left {
+  width: 100%;
+  justify-content: center;
+}
+
+.footer-copi-right {
+  width: 100%;
+  justify-content: center;
+}
+
+  
+
+
+}

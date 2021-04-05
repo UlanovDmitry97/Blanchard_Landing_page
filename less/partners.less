@@ -1,0 +1,23 @@
+.main-partners{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 489px;
+  background-image: url(../img/main_partners_bg.png);
+
+  &-card{
+    margin: 0 90px 0 0;
+
+    &:hover &-icon{
+      transform: scale(1.5);
+    }
+
+    &-icon{
+      transition: transform 1s ease-out;
+    }
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
