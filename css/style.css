@@ -1372,6 +1372,9 @@ body {
     width: 50%;
     justify-content: space-between;
   }
+  .main-features-wrp_card__title {
+    text-align: center;
+  }
   .main-realization {
     display: none;
   }
@@ -1469,6 +1472,9 @@ body {
   }
   .main-partners-card-icon {
     width: 75%;
+  }
+  .main-features-wrp_card__title {
+    text-align: center;
   }
   .footer-content {
     display: none;
