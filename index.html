@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/burgerMenu.js" defer></script>
     <title>LandingPage</title>
 </head>
 
@@ -21,12 +23,6 @@
                 <span class="header-top-logo-txt">Waxom</span>
             </a>
             <nav class="header-top-menu">
-                <label class="header-top-menu-burger" for="menu">
-            <span class="header-top-menu-burger__icon1"></span>
-            <span class="header-top-menu-burger__icon2"></span>
-            <span class="header-top-menu-burger__icon3"></span>
-          </label>
-                <input id="menu" type="checkbox" />
                 <ul class="header-top-menu-list">
                     <li class="header-top-menu-list-item">
                         <a href="#" class="header-top-menu-list-item-link">Home</a>
@@ -54,6 +50,21 @@
                     </li>
                 </ul>
             </nav>
+            <div class="menu-collapsed">
+                <div class="bar"></div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Shortcodes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
             <button class="header-top-basket">
           <svg
             class="header-top-basket-icon"
