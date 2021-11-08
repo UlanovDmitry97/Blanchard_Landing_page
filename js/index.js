@@ -364,18 +364,26 @@ function checkWindowWidth() {
 checkWindowWidth();
 
 // Прокрутка на мобильной версии каталог
+function scroll() {
+  const content = document.querySelector('.catalog__content-left');
+
+  content.scrollIntoView({behavior: "smooth"});
+}
 
 function scrolling() {
   const artists = document.querySelectorAll('.accordion__artists');
-  const content = document.querySelector('.catalog__content-left');
   const currentWidth = getWindowWidth();
   const MOBILE_WIDTH = 580;
 
   if (currentWidth < MOBILE_WIDTH) {
     artists.forEach((el) => {
-      el.addEventListener('click', function () {
-        content.scrollIntoView({behavior: "smooth"});
-      })
+      el.addEventListener('click', scroll);
+    })
+  }
+
+  if (currentWidth > MOBILE_WIDTH) {
+    artists.forEach((el) => {
+      el.removeEventListener('click', scroll);
     })
   }
 }
