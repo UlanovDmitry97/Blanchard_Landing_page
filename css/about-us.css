@@ -1,0 +1,58 @@
+:root {
+  --light-text: #fff;
+  --dark-text: #333;
+  --focus-active:  #7943A4;
+  --hover: #C283F3;
+}
+
+.about-us__container {
+  padding-top: 80px;
+  padding-bottom: 71px;
+}
+
+.about-us__title {
+  margin-bottom: 15px;
+}
+
+.about-us__info {
+  max-width: 1080px;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-text);
+}
+
+@media (max-width: 1400px) {
+  .about-us__info {
+    max-width: 100%;
+  }
+
+  .about-us__container {
+    padding-bottom: 71px;
+  }
+}
+
+@media (max-width: 968px) {
+  .about-us__title {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us__container {
+    padding-top: 51px;
+    padding-bottom: 40px;
+  }
+
+  .about-us__title {
+    margin-bottom: 12px;
+  }
+
+  .about-us__info {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+
+}
+
+
