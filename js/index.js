@@ -363,6 +363,25 @@ function checkWindowWidth() {
 
 checkWindowWidth();
 
+// Прокрутка на мобильной версии каталог
+
+function scrolling() {
+  const artists = document.querySelectorAll('.accordion__artists');
+  const content = document.querySelector('.catalog__content-left');
+  const currentWidth = getWindowWidth();
+  const MOBILE_WIDTH = 580;
+
+  if (currentWidth < MOBILE_WIDTH) {
+    artists.forEach((el) => {
+      el.addEventListener('click', function () {
+        content.scrollIntoView({behavior: "smooth"});
+      })
+    })
+  }
+}
+
+scrolling();
+
 // Секция события
 function developmentsSection() {
   const TABLET_WIDTH = 968;
@@ -507,21 +526,15 @@ new JustValidate('.contacts__form', {
   submitHandler: function(form) {
     let formData = new FormData(form);
 
-    let xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function() {
-      if(xhr.readyState === 4) {
-        if(xhr.status === 200) {
-          console.log('Отправлено');
-        }
-      }
-    }
-    xhr.open('POST', 'mail.php', true);
-    xhr.send(formData);
-
-    form.reset();
+    fetch('mail.php', {
+      method: 'POST',
+      body: formData
+    }).then(() => {
+      console.log('Отправлено');
+      form.reset();
+    }).catch(() => console.log('Ошибка'));
   }
-})
+});
 
 // Карта
 ymaps.ready(init);
@@ -583,7 +596,9 @@ window.addEventListener("resize", function () {
   checkWindowWidth();
   moveMape();
   developmentsSection();
+  scrolling()
 });
+
 });
 
 
