@@ -228,7 +228,7 @@
   z-index: 1;
   display: block;
   padding-top: 100%;
-  transition: background-color .3s ease, border-color .3s ease;
+  transition: border-color .3s ease;
 }
 
 .slides-container__slide::after {
@@ -277,6 +277,144 @@
   object-fit: cover;
 }
 
+.gallery__slide {
+  cursor: pointer;
+}
+
+.modals__wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-timing-function: linear;
+  transition-duration: .4s;
+}
+
+.modals__wrap-visable {
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity, visibility;
+  transition-timing-function: linear;
+  transition-duration: .4s;
+}
+
+.modal {
+  position: relative;
+ display: none;
+}
+
+.modal-visable {
+  display: flex;
+}
+
+.modal__img {
+  height: 100%;
+}
+
+.modal__inner {
+  padding: 121px 50px;
+  background-color: var(--light-text);
+}
+
+.modal__info {
+  margin-bottom: 40px;
+}
+
+.modal__author {
+  display: block;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.modal__name {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.modal__date {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #969696;
+}
+
+.modal__description {
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-text);
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal__close-btn {
+  position: relative;
+  width: 20px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.modal__close::before,
+.modal__close:after {
+  position: absolute;
+  top: 0;
+  right: 9px;
+  width: 1px;
+  height: 21px;
+  content: "";
+  background-color: #000;
+}
+
+.modal__close::before {
+  transform: rotate(-45deg);
+}
+
+.modal__close::after {
+  transform: rotate(45deg);
+}
+
+.modal-plug {
+  width: 40%;
+}
+
+.modal-plug__img {
+  width: 40%;
+  height: 500px;
+  background-color: #969696;
+}
+
+.modal__inner-plug {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-text);
+}
 @media (max-width: 1200px) {
   .gallery {
     background-image: url("../img/gallery-bg__1024.jpg");

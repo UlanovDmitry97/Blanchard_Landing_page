@@ -124,6 +124,30 @@ let gallerySlider = new Swiper(".slides-container", {
   a11y: false
 });
 
+// Модальное окно галерея
+function galleryModal() {
+  const paintings = document.querySelectorAll('.gallery__slide');
+  const modalsWrap = document.querySelector('.modals__wrap');
+  const closeBtns = document.querySelectorAll ('.modal__close-btn');
+
+  closeBtns.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      modalsWrap.classList.remove('modals__wrap-visable');
+      e.currentTarget.parentNode.parentNode.classList.remove('modal-visable');
+    })
+  })
+
+  paintings.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      const path = e.currentTarget.getAttribute('data-path');
+      document.querySelector(`[data-target="${path}"]`).classList.add('modal-visable');
+      modalsWrap.classList.add('modals__wrap-visable');
+    })
+  })
+}
+
+galleryModal();
+
 // ----Табы----
 document.querySelectorAll('.catalog__tabs-btn').forEach(tubsBtn => {
   tubsBtn.addEventListener('click', event => {
@@ -478,7 +502,25 @@ new JustValidate('.contacts__form', {
     name: 'Недопустимый формат',
     tel:  'Недопустимый формат',
   },
-  colorWrong: '#D11616'
+  colorWrong: '#D11616',
+
+  submitHandler: function(form) {
+    let formData = new FormData(form);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if(xhr.readyState === 4) {
+        if(xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    form.reset();
+  }
 })
 
 // Карта

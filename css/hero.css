@@ -134,10 +134,14 @@
     max-width: 661px;
     margin-bottom: 133px;
   }
+
+  .slide-1 {
+    background-image: url("../img/hero__bg-img1-1024px.jpg");
+  }
 }
 
 @media (max-width: 968px) {
-  .hero__slider {
+  .slide-1 {
     background-image: url("../img/hero__bg-img1-768px.jpg");
   }
 
@@ -160,7 +164,7 @@
     padding-bottom: 44px;
   }
 
-  .hero__slider {
+  .slide-1 {
     background-image: url("../img/hero__bg-img1-320px.jpg");
   }
 
