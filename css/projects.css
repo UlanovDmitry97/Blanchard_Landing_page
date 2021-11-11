@@ -36,6 +36,8 @@
 	width: 16px;
 	height: 16px;
 	background-image: url("../img/tooltip.png");
+  -webkit-transition: background-image .2s ease-in-out;
+  -o-transition: background-image .2s ease-in-out;
   transition: background-image .2s ease-in-out;
 }
 
@@ -46,8 +48,11 @@
   background-color: #9D5CD0;
 	top: -61px;
 	left: 45%;
-	transform: translate(-50%);
-	transform-style: preserve-3d;
+	-webkit-transform: translate(-50%);
+	    -ms-transform: translate(-50%);
+	        transform: translate(-50%);
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
 	z-index: 200;
   text-align: center;
 	font-size: 12px;
@@ -71,8 +76,12 @@
 	display: block;
 	width: 10px;
 	height: 10px;
-	transform-origin: 50% 50%;
-	transform: rotate(45deg) translateX(-50%);
+	-webkit-transform-origin: 50% 50%;
+	    -ms-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+	-webkit-transform: rotate(45deg) translateX(-50%);
+	    -ms-transform: rotate(45deg) translateX(-50%);
+	        transform: rotate(45deg) translateX(-50%);
 	background-color: #9D5CD0;
 	left: 50%;
 	bottom: -8px;
@@ -85,8 +94,11 @@
 	position: absolute;
 	width: 10px;
 	height: 10px;
-	transform-origin: 50% 50%;
-	transform: rotate(45deg) translateX(-50%) translateZ(-1px);
+	-webkit-transform-origin: 50% 50%;
+	    -ms-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+	-webkit-transform: rotate(45deg) translateX(-50%) translateZ(-1px);
+	        transform: rotate(45deg) translateX(-50%) translateZ(-1px);
 	background-color: #666;
 	left: 50%;
 	bottom: -8px;
@@ -130,10 +142,17 @@
 }
 
 .projects__slider{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .projects__slider-container {
@@ -146,13 +165,16 @@
 .projects__navigation-btn {
   position: relative;
   padding: 0;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 30px;
   height: 30px;
   background-color: #ECECEC;
   border: 2px solid transparent;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: background-color .4s ease-in-out;
+  -o-transition: background-color .4s ease-in-out;
   transition: background-color .4s ease-in-out;
 }
 
@@ -162,8 +184,12 @@
   top: calc(50% - 7px / 2);
   width: 7px;
   height: 7px;
-  transform: rotate(45deg);
-  transform-origin: center;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
 }
 
 .projects__btn-next::before {
@@ -181,21 +207,39 @@
 
 .projects__slide-img {
   display: block;
-  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   opacity: 0.4;
+  -webkit-transition: -webkit-filter .3s ease-in-out;
+  transition: -webkit-filter .3s ease-in-out;
+  -o-transition: filter .3s ease-in-out;
   transition: filter .3s ease-in-out;
+  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  -o-transition-property: filter, opacity;
   transition-property: filter, opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: .4s;
+  transition-property: filter, opacity, -webkit-filter;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: .4s;
+       -o-transition-duration: .4s;
+          transition-duration: .4s;
 }
 
 .projects__slide-partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .projects__slide-partners:hover .projects__slide-img {
-  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
   opacity: 1;
 }
 

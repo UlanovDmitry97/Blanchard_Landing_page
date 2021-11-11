@@ -18,14 +18,21 @@
 }
 
 .developments__cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .developments__cards-item {
   width: 31.2%;
   margin-right: 3.2%;
+  -webkit-transition: max-height 0.4s ease-in-out;
+  -o-transition: max-height 0.4s ease-in-out;
   transition: max-height 0.4s ease-in-out;
 }
 
@@ -38,17 +45,28 @@
 }
 
 .developments__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   overflow: hidden;
 }
 
 .developments__card-btn {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 188px;
   height: 59px;
   margin: 0 auto;
@@ -60,9 +78,15 @@
   color: #9D5CD0;
   border: 2px solid #9D5CD0;
   cursor: pointer;
+  -webkit-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
   transition-property: background-color, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: .4s;
+       -o-transition-duration: .4s;
+          transition-duration: .4s;
 }
 
 .developments__card-btn.focus-visible::after {
@@ -104,10 +128,19 @@
 
 .developments__card-info {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 50px 48px 41px;
   border-bottom: 1px solid #CACACA;
   border-right: 1px solid #CACACA;
@@ -118,9 +151,16 @@
   position: absolute;
   right: 18px;
   top: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   font-size: 12px;
   line-height: 16px;
   font-weight: 600;
@@ -148,9 +188,15 @@
   line-height: 27px;
   color: #9D5CD0;
   border-bottom: 1px solid #9D5CD0;
+  -webkit-transition-property: color, border-color;
+  -o-transition-property: color, border-color;
   transition-property: color, border-color;
-  transition-timing-function: ease-in-out;
-  transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: .4s;
+       -o-transition-duration: .4s;
+          transition-duration: .4s;
 }
 
 .developments__card-link.focus-visible {
@@ -286,7 +332,9 @@
   }
 
   .developments__cards-list {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   .developments__card-img_engraving {
@@ -390,8 +438,5 @@
     padding-right: 18px;
     padding-bottom: 44px;
   }
-
-
 }
-
 

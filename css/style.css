@@ -96,13 +96,16 @@ fieldset {
 .navigation-btn {
   position: relative;
   padding: 0;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 30px;
   height: 30px;
   background-color: #666;
   border: 2px solid transparent;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: background-color .4s ease-in-out;
+  -o-transition: background-color .4s ease-in-out;
   transition: background-color .4s ease-in-out;
 }
 
@@ -131,8 +134,12 @@ fieldset {
   top: calc(50% - 7px / 2);
   width: 7px;
   height: 7px;
-  transform: rotate(45deg);
-  transform-origin: center;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
 }
 
 .btn-prev {

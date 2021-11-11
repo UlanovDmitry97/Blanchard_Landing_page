@@ -348,7 +348,7 @@ function checkWindowWidth() {
       active: false,
       icons: false,
       heightStyle: "auto",
-      activate: function (evt, ui) {
+      beforeActivate: function (evt, ui) {
         onAccordionClick(evt, ui);
       }
     });
