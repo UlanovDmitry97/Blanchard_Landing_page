@@ -109,8 +109,8 @@
   display: block;
   position: absolute;
   content: "";
-  top: -12px;
-  left: -9px;
+  top: -11px;
+  left: -10px;
   width: 137%;
   height: 138%;
   border: 2px solid var(--focus-active);
@@ -118,7 +118,7 @@
 }
 
 .catalog__tabs {
-  margin-top: 12px;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +305,7 @@
   display: block;
   position: absolute;
   content: "";
-  top: 17px;
+  top: 20px;
   left: 17px;
   width: 12px;
   height: 12px;
@@ -647,7 +647,7 @@
     width: 44px;
     height: 44px;
     top: -8px;
-    left: -7px;
+    left: -8px;
   }
 
   .catalog__tabs-btn {

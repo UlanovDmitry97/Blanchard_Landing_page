@@ -206,6 +206,10 @@
   transition: border-bottom .4s ease-in-out;
 }
 
+.header-search-768__input.focus-visible {
+  outline: none;
+}
+
 .header-search-1024__input:focus {
   outline: none;
   border-bottom: 1px solid var(--hover);

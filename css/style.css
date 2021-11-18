@@ -109,7 +109,7 @@ fieldset {
   transition: background-color .4s ease-in-out;
 }
 
-.navigation-btn:hover {
+.navigation-btn:hover{
   background-color: #9D5CD0;
 }
 
@@ -126,6 +126,7 @@ fieldset {
 .swiper-button-disabled {
   opacity: 0.5;
   background-color: #666;
+  pointer-events: none;
 }
 
 .navigation-btn::before {
@@ -156,6 +157,12 @@ fieldset {
   left: calc(50% - 7px / 2);
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
+}
+
+input::-ms-clear{
+	display:none;
+	width:0;
+	height:0;
 }
 
 @media (max-width: 480px) {

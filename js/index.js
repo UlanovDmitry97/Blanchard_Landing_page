@@ -126,8 +126,8 @@ let gallerySlider = new Swiper(".slides-container", {
     type: "fraction"
   },
   navigation: {
-    nextEl: ".btn-next",
-    prevEl: ".btn-prev"
+    nextEl: ".gallery-right__btn-next",
+    prevEl: ".gallery-right__btn-prev"
   },
 
   breakpoints: {
@@ -303,8 +303,8 @@ let editionsSlider = new Swiper(".editions__slides-container", {
   },
 
   navigation: {
-    nextEl: ".btn-next",
-    prevEl: ".btn-prev"
+    nextEl: ".editions__btn-next",
+    prevEl: ".editions__btn-prev"
   },
 
   breakpoints: {

@@ -178,6 +178,21 @@
   transition: background-color .4s ease-in-out;
 }
 
+.projects__navigation-btn:hover:not(.swiper-button-disabled) {
+  background-color: #D1A9F0;
+}
+
+.projects__navigation-btn:active {
+  background: #D1A9F0;
+  border: 2px solid #9D5CD0;
+}
+
+.projects__navigation-btn.focus-visible {
+  outline: none;
+  border: 2px solid #9D5CD0;
+}
+
+
 .projects__navigation-btn::before {
   content: "";
   position: absolute;

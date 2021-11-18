@@ -130,14 +130,14 @@
 .check + span::before {
   position: absolute;
   content: "";
-  top: 31%;
+  width: 100%;
+  height: 100%;
+  top: 0;
   bottom: 0;
-  left: 33%;
   right: 0;
-  width: 4px;
-  height: 4px;
-  background-color: #C283F3;
-  border-radius: 50%;
+  background-image: url("../img/editions_point.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: opacity .3s ease-in-out;
   -o-transition: opacity .3s ease-in-out;
