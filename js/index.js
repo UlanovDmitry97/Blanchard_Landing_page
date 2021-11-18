@@ -165,12 +165,15 @@ function galleryModal() {
   function closeModal () {
     modalsWrap.classList.remove('modals__wrap-visable');
     modals.forEach(el => el.classList.remove('modal-visable'));
+    document.body.classList.remove('scroll-hidden');
   }
 
   closeBtns.forEach((el) => {
     el.addEventListener('click', (e) => {
       modalsWrap.classList.remove('modals__wrap-visable');
       e.currentTarget.parentNode.parentNode.classList.remove('modal-visable');
+
+      document.body.classList.remove('scroll-hidden');
     })
   })
 
@@ -179,6 +182,9 @@ function galleryModal() {
       const path = e.currentTarget.getAttribute('data-path');
       document.querySelector(`[data-target="${path}"]`).classList.add('modal-visable');
       modalsWrap.classList.add('modals__wrap-visable');
+
+      document.body.classList.add('scroll-hidden');
+
       const modalsWrapClose = document.querySelector('.modals__wrap-visable');
       modalsWrapClose.addEventListener('click', (e) => {
         let target = e.target;
