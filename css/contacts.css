@@ -52,7 +52,7 @@
 }
 
 .contacts__input {
-  width: 400px;
+  width: 77%;
   padding: 11px 24px 10px 22px;
   border: 1px solid var(--dark-text);
   border-radius: 100px;
@@ -232,7 +232,7 @@
   line-height: 16px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1310px) {
   .contacts__contacts {
     width: calc(437 / 924 * 100%);
     padding-bottom: 100px;

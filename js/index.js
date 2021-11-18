@@ -9,9 +9,10 @@ document.querySelector('#close').addEventListener('click', function() {
 });
 
 // Кнопки для художников
+const dropdowns = document.querySelectorAll('.dropdown');
+const btnsHeader = document.querySelectorAll('.header-bottom__btn');
 function openCloseDropdown(btn) {
   const dataIndex = btn.dataset.indexNumber;
-  const dropdowns = document.querySelectorAll('.dropdown');
   const btns = document.querySelectorAll('.header-bottom__btn');
 
   for (const dropdown of dropdowns) {
@@ -31,14 +32,44 @@ function openCloseDropdown(btn) {
   }
 }
 
-const btnsHeader = document.querySelectorAll('.header-bottom__btn');
-
 for (const btn of btnsHeader) {
   btn.addEventListener('click', function() {
     openCloseDropdown(this);
     this.classList.toggle('header-bottom__btn_is-active');
   })
 }
+
+function closeBtnAndDropdown () {
+  btnsHeader.forEach(el => el.classList.remove('header-bottom__btn_is-active'));
+  dropdowns.forEach(el => el.classList.remove('is-active'));
+}
+
+document.addEventListener('click', e => {
+  let target = e.target;
+    for (const btn of btnsHeader) {
+      if(btn == target) {
+        its_btnsHeader = true;
+        break;
+      }
+      else {
+        its_btnsHeader = false;
+      }
+    }
+
+    for (const dropdown of dropdowns) {
+      if(dropdown == target || dropdown.contains(target)) {
+        its_dropdown = true;
+        break;
+      }
+      else {
+        its_dropdown = false;
+      }
+    }
+
+  if (!its_btnsHeader && !its_dropdown) {
+    closeBtnAndDropdown();;
+  }
+})
 
 //  Поиск
 document.querySelector('#search_btn-1024').addEventListener('click', function() {
@@ -126,9 +157,15 @@ let gallerySlider = new Swiper(".slides-container", {
 
 // Модальное окно галерея
 function galleryModal() {
+  const modals = document.querySelectorAll('.modal');
   const paintings = document.querySelectorAll('.gallery__slide');
   const modalsWrap = document.querySelector('.modals__wrap');
   const closeBtns = document.querySelectorAll ('.modal__close-btn');
+
+  function closeModal () {
+    modalsWrap.classList.remove('modals__wrap-visable');
+    modals.forEach(el => el.classList.remove('modal-visable'));
+  }
 
   closeBtns.forEach((el) => {
     el.addEventListener('click', (e) => {
@@ -142,8 +179,28 @@ function galleryModal() {
       const path = e.currentTarget.getAttribute('data-path');
       document.querySelector(`[data-target="${path}"]`).classList.add('modal-visable');
       modalsWrap.classList.add('modals__wrap-visable');
+      const modalsWrapClose = document.querySelector('.modals__wrap-visable');
+      modalsWrapClose.addEventListener('click', (e) => {
+        let target = e.target;
+
+        for(const modal of modals) {
+          if(modal == target || modal.contains(target)) {
+            its_modal = true;
+            break;
+          }
+          else {
+            its_modal = false;
+          }
+        }
+
+        if (!its_modal) {
+          closeModal();
+        }
+      });
     })
   })
+
+
 }
 
 galleryModal();
@@ -182,7 +239,7 @@ document.querySelectorAll('.accordion__artists').forEach(tubsBtn => {
   })
 });
 
-// Аккордион
+// Аккордионн
 $(function () {
   $(".accordion").accordion({
     heightStyle: "content",

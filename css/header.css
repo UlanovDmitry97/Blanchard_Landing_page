@@ -16,7 +16,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
 }
 
 .burger-menu {
@@ -24,6 +24,7 @@
 }
 
 .header__logo {
+  width: 11%;
   margin-right: auto;
 }
 
@@ -246,6 +247,10 @@
 }
 
 .header-bottom__list {
+  width: 64%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,14 +259,17 @@
       flex-wrap: wrap;
 }
 
-.header-bottom__item:not(:last-child) {
-  margin-right: 96px;
-  margin-bottom: 5px;
-}
-
 .header-bottom__item:nth-child(3),
 .header-bottom__item:nth-child(4) {
-  margin-right: 100px;
+  -webkit-transform: translateX(4px);
+      -ms-transform: translateX(4px);
+          transform: translateX(4px);
+}
+
+.header-bottom__item:last-child {
+  -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 .header-bottom__item {
@@ -337,7 +345,7 @@
 
 .header-bottom__dropdown {
   position: absolute;
-  top: 47px;
+  top: 46px;
 }
 
 .dropdown {
@@ -384,8 +392,8 @@
 }
 
 .dropdown__btn_tintoretto:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Tintoretto_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Tintoretto_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Tintoretto_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Tintoretto_select_img.png");
 }
 
@@ -394,8 +402,8 @@
 }
 
 .dropdown__btn_renuar:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Renuar_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Renuar_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Renuar_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Renuar_select_img.png");
 }
 
@@ -404,8 +412,8 @@
 }
 
 .dropdown__btn_fredreh:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Fredreh_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Fredreh_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Fredreh_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Fredreh_select_img.png");
 }
 
@@ -414,8 +422,8 @@
 }
 
 .dropdown__btn_leonardo:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Leonardo_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Leonardo_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Leonardo_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Leonardo_select_img.png");
 }
 
@@ -424,8 +432,8 @@
 }
 
 .dropdown__btn_verrok:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Verrok\'o_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Verrok\'o_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Verrok\'o_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Verrok\'o_select_img.png");
 }
 
@@ -434,8 +442,8 @@
 }
 
 .dropdown__btn_mone:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Mone_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Mone_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Mone_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Mone_select_img.png");
 }
 
@@ -444,8 +452,8 @@
 }
 
 .dropdown__btn_sisley:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Sisley_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Sisley_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Sisley_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Sisley_select_img.png");
 }
 
@@ -454,8 +462,8 @@
 }
 
 .dropdown__btn_mane:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Mane_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Mane_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Mane_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Mane_select_img.png");
 }
 
@@ -465,8 +473,8 @@
 }
 
 .dropdown__btn_van-gog:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Van-Gog_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Van-Gog_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Van-Gog_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Van-Gog_select_img.png");
 }
 
@@ -475,8 +483,8 @@
 }
 
 .dropdown__btn_sezan:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Sezan_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Sezan_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Sezan_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Sezan_select_img.png");
 }
 
@@ -485,8 +493,8 @@
 }
 
 .dropdown__btn_gogen:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Gogen_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Gogen_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Gogen_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Gogen_select_img.png");
 }
 
@@ -495,8 +503,8 @@
 }
 
 .dropdown__btn_sera:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Sera_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Sera_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Sera_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Sera_select_img.png");
 }
 
@@ -505,8 +513,8 @@
 }
 
 .dropdown__btn_kandinskiy:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Kandinskiy_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Kandinskiy_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Kandinskiy_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Kandinskiy_select_img.png");
 }
 
@@ -515,8 +523,8 @@
 }
 
 .dropdown__btn_marenette:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Marenette_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Marenette_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Marenette_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Marenette_select_img.png");
 }
 
@@ -525,8 +533,8 @@
 }
 
 .dropdown__btn_malevich:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Malevich_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Malevich_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Malevich_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Malevich_select_img.png");
 }
 
@@ -535,8 +543,8 @@
 }
 
 .dropdown__btn_picaso:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Picaso_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Picaso_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Picaso_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Picaso_select_img.png");
 }
 
@@ -545,8 +553,8 @@
 }
 
 .dropdown__btn_karra:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Karra_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Karra_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Karra_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Karra_select_img.png");
 }
 
@@ -555,8 +563,8 @@
 }
 
 .dropdown__btn_paratella:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Paratella_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Paratella_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Paratella_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Paratella_select_img.png");
 }
 
@@ -565,8 +573,8 @@
 }
 
 .dropdown__btn_severinni:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Severinni_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Severinni_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Severinni_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Severinni_select_img.png");
 }
 
@@ -575,8 +583,8 @@
 }
 
 .dropdown__btn_bella:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Bella_select_img.png");
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Bella_select_img.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4))), url("../img/Bella_select_img.png");
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/Bella_select_img.png");
 }
 
@@ -586,7 +594,7 @@
   background-color: #000;
 }
 
-.simplebar-scrollbar.simplebar-visible {
+.simplebar-scrollbar {
   width: 100%;
   opacity: 1;
   background-color: var(--light-text);
@@ -786,7 +794,7 @@
 .is-active {
   display: block;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1310px) {
   .header__container {
     padding-top: 30px;
     padding-bottom: 28px;
@@ -838,6 +846,7 @@
   }
 
   .header__logo {
+    width: auto;
     margin-right: 0;
   }
 
@@ -984,6 +993,3 @@
         align-self: flex-end;
   }
 }
-
-
-

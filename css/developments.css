@@ -247,7 +247,7 @@
   display: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1310px) {
   .developments__card-img {
     height: 200px;
   }
