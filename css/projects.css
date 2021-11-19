@@ -35,7 +35,7 @@
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	background-image: url("../img/tooltip.png");
+	background-image: url("../img/tooltip.svg");
   -webkit-transition: background-image .2s ease-in-out;
   -o-transition: background-image .2s ease-in-out;
   transition: background-image .2s ease-in-out;
@@ -110,7 +110,7 @@
 }
 
 .marker-active {
-  background-image: url("../img/tooltip-active.png");
+  background-image: url("../img/tooltip-active.svg");
 }
 
 .projects__text-link {
@@ -129,7 +129,7 @@
 
 .marker_information.focus-visible:not(.marker-active) {
   outline: none;
-  background-image: url("../img/tooltip-hover.png");
+  background-image: url("../img/tooltip-hover.svg");
 }
 
 .projects__slider-title {

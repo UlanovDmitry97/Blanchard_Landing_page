@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 // Бургуер меню
-document.querySelector('#burger').addEventListener('click', function() {
-  document.querySelector('#menu').classList.add('menu_active')
+document.getElementById('burger').addEventListener('click', function() {
+  document.getElementById('menu').classList.add('menu_active')
 });
 
-document.querySelector('#close').addEventListener('click', function() {
-  document.querySelector('#menu').classList.remove('menu_active')
+document.getElementById('close').addEventListener('click', function() {
+  document.getElementById('menu').classList.remove('menu_active')
 });
 
 // Кнопки для художников
@@ -72,8 +72,8 @@ document.addEventListener('click', e => {
 })
 
 //  Поиск
-document.querySelector('#search_btn-1024').addEventListener('click', function() {
-  document.querySelector('#search-1024').classList.toggle('header-search-1024__input_active'),
+document.getElementById('search_btn-1024').addEventListener('click', function() {
+  document.getElementById('search-1024').classList.toggle('header-search-1024__input_active'),
   document.querySelector('.header-search-1024').classList.toggle('header__search_wrap_active')
 });
 
@@ -88,11 +88,11 @@ window.addEventListener('click', e => {
   }
 });
 
-document.querySelector('#search_btn-768').addEventListener('click', function() {
+document.getElementById('search_btn-768').addEventListener('click', function() {
   document.querySelector('.header-search-768_wrap').classList.add('is-active__header__search_wrap')
 });
 
-document.querySelector('#search_btn-close').addEventListener('click', function() {
+document.getElementById('search_btn-close').addEventListener('click', function() {
   document.querySelector('.header-search-768_wrap').classList.remove('is-active__header__search_wrap')
 });
 
@@ -131,7 +131,7 @@ let gallerySlider = new Swiper(".slides-container", {
   },
 
   breakpoints: {
-    441: {
+    480: {
       slidesPerView: 2,
 
       slidesPerGroup: 2,
@@ -150,9 +150,7 @@ let gallerySlider = new Swiper(".slides-container", {
       },
       spaceBetween: 50
     }
-  },
-
-  a11y: false
+  }
 });
 
 // Модальное окно галерея
@@ -269,16 +267,7 @@ for (const accordionElement of accordionElements) {
 
 // Переход по ссылкам плавно
 $(document).ready(function(){
-  $("#catalog").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top}, 1500);
-  });
-});
-
-$(document).ready(function(){
-  $("#header").on("click","a", function (event) {
+  $('body,html').on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
@@ -574,8 +563,8 @@ new JustValidate('.contacts__form', {
   rules: {
     name: {
       required: true,
-      minLenght: 2,
-      maxLenght: 20,
+      minLength: 2,
+      maxLength: 20
     },
 
     tel: {
@@ -589,8 +578,8 @@ new JustValidate('.contacts__form', {
   },
 
   messages: {
-    name: 'Недопустимый формат',
-    tel:  'Недопустимый формат',
+    name: 'Недопустимый формат, имени',
+    tel:  'Недопустимый формат, телефона',
   },
   colorWrong: '#D11616',
 
@@ -603,14 +592,29 @@ new JustValidate('.contacts__form', {
     }).then(() => {
       console.log('Отправлено');
       form.reset();
+      modalSent();
     }).catch(() => console.log('Ошибка'));
   }
 });
 
+function modalSent() {
+  const modalsWrap = document.querySelector('.modal-send-wrap');
+  const modalSend = document.querySelector('.modal-send');
+  modalsWrap.classList.add('modal-send-wrap-visable');
+  modalSend.classList.add('modal-send-visable');
+  document.body.classList.add('scroll-hidden');
+
+  setTimeout(function () {
+    modalSend.classList.remove('modal-send-visable');
+    modalsWrap.classList.remove('modal-send-wrap-visable');
+    document.body.classList.remove('scroll-hidden');
+  }, 1500)
+}
+
 // Карта
 ymaps.ready(init);
 function init() {
-  const mapElem = document.querySelector('#map');
+  const mapElem = document.getElementById('map');
   const myMap = new ymaps.Map(
     "map",
     {
@@ -646,7 +650,7 @@ function init() {
 function moveMape() {
   const MOBILE_MAP = 580;
   const currentWidth = getWindowWidth();
-  const map = document.querySelector('#map');
+  const map = document.getElementById('map');
   const address = document.querySelector('.contacts__address');
   const wrap = document.querySelector('.contacts__container');
 
