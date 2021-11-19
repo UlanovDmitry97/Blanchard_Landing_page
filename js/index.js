@@ -417,9 +417,12 @@ checkWindowWidth();
 
 // Прокрутка на мобильной версии каталог
 function scroll() {
-  const content = document.querySelector('.catalog__content-left');
+  const content = document.querySelector('.catalog');
 
-  content.scrollIntoView({behavior: "smooth"});
+  content.scrollIntoView({
+    behavior: "smooth",
+    block: 'end'
+  });
 }
 
 function scrolling() {
@@ -480,21 +483,6 @@ function developmentsSection() {
 }
 
 developmentsSection();
-
-// Секция издания
-function editionsSection() {
-  const checkBoxes = document.querySelectorAll('.editions__checkbox');
-
-  for (const checkBox of checkBoxes) {
-    checkBox.addEventListener('keydown', function (e) {
-      if (e.keyCode === 13) {
-        checkBox.click();
-      }
-    })
-  }
-}
-
-editionsSection();
 
 // Секция проекты
 function projectsSection() {
@@ -578,8 +566,8 @@ new JustValidate('.contacts__form', {
   },
 
   messages: {
-    name: 'Недопустимый формат, имени',
-    tel:  'Недопустимый формат, телефона',
+    name: 'Недопустимый формат, имя должно содержать от 2 до 20 букв',
+    tel:  'Недопустимый формат телефона, введите телефон полностью',
   },
   colorWrong: '#D11616',
 

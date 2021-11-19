@@ -80,7 +80,8 @@
 }
 
 .check {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .editions__checkbox {
@@ -101,15 +102,11 @@
   border-color: #C283F3;
 }
 
-.editions__checkbox.focus-visible {
-  outline: none;
-}
-
-.editions__checkbox.focus-visible .editions__checkbox-text {
+.check.focus-visible ~ .editions__checkbox-text {
   color: #C283F3;
 }
 
-.editions__checkbox.focus-visible .editions__check {
+.check.focus-visible ~ .editions__check {
   border-color: #C283F3;
 }
 
